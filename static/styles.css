@@ -24,6 +24,27 @@ body {
     height: 200px;
 }
 
+h1 { 
+    font-size: 45px;
+}
+
+ul { 
+    font-size: 20px;
+}
+
 li {
     list-style-type: none
+}
+
+.add {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f1f1f1;
+    border: 1px solid black
 }

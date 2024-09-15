@@ -8,15 +8,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
-  </head>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>  
+</head>
   <body>
     <div class="mainContainer">
     <h1>Task Penguin</h1>
     <ul>
       {% for todo in todos %}
       <li>
-        <form action="{{ url_for('check', index=loop.index0) }}" method="post" style="display:inline;">
-          <input type="checkbox" name="done" {% if todo['done'] %} checked {% endif %} onchange="this.form.submit()"/>
+        <form action="{{ url_for('check', index=loop.index0) }}" method="post" style="display:inline;" >
+          <input  type="checkbox" name="done" {% if todo['done'] %} checked {% endif %} onchange="this.form.submit()"/>
         </form>
         <span {% if todo['done'] %} style="text-decoration: line-through" {% endif %}>{{ todo['task'] }}</span>
         <a href="{{ url_for('edit', index=loop.index0) }}">Edit</a>
@@ -24,11 +25,12 @@
       </li>
       {% endfor %}
     </ul>
-    <form action="{{ url_for('add') }}" method="post">
-      <input type="text" name="todo" />
+    <form action="{{ url_for('add') }}" method="post" class="add">
+      <input autocomplete="off" type="text" name="todo" />
       <button type="submit">Add</button>
     </form>
     <img class="penguin_img" src="{{ url_for('static', filename='images/penguin_task.png') }}" alt="penguin">
   </div>
+  <script src="{{ url_for('static', filename='js/confetti.js') }}"></script>
   </body>
 </html>
