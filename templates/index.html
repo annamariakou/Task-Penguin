@@ -24,7 +24,8 @@
     <form action="{{ url_for('add') }}" method="post">
       <input type="text" name="todo" />
       <button type="submit">Add</button>
-    </div>
     </form>
+    <img class="penguin_img" src="{{ url_for('static', filename='images/penguin_task.png') }}" alt="penguin">
+  </div>
   </body>
 </html>
