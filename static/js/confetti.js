@@ -4,9 +4,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
     event.preventDefault();
     confetti({
       particleCount: 100,
-      spread: 70,
+      spread: 120,
       origin: { y: 0.6 },
-      duration: 5000,
+      duration: 7000,
     });
     setTimeout(() => {
       event.target.closest("form").submit();
