@@ -45,6 +45,24 @@ button {
     margin: 10px;
     padding: 10px;
     border-radius: 10px;
-    background-color: #f1f1f1;
-    border: 1px solid black
+    background-color: #99BAE6;
+    border: none;
+    font-family: "Gamja Flower", sans-serif;
+    font-size: 20px;
+}
+
+button:hover {
+    background-color: #C7B3D6;
+    cursor: pointer;
+}
+
+.delete_img {
+    width: 13px;
+    height: 13px;
+   padding-top: 5px;
+}
+
+.heart {
+    width: 13px;
+    height: 13px;
 }
